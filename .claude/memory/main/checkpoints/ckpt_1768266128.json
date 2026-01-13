@@ -1,0 +1,31 @@
+{
+  "id": "ckpt_1768266128",
+  "description": "Auto-checkpoint after 15 file changes",
+  "timestamp": "2026-01-13T01:02:08Z",
+  "git": {
+    "branch": "HEAD\nunknown",
+    "commit": "HEAD\nunknown",
+    "dirty": true
+  },
+  "memory": {
+    "working": {
+      "currentTask": null,
+      "currentContext": [],
+      "recentActions": [],
+      "pendingItems": [],
+      "scratchpad": "",
+      "lastUpdated": null
+    },
+    "episodic": {
+      "episodes": []
+    },
+    "semantic": {
+      "facts": [],
+      "patterns": [],
+      "preferences": []
+    },
+    "reflections": {
+      "reflections": []
+    }
+  }
+}
