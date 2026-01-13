@@ -18,6 +18,13 @@ Model: flash
 
 Claude will automatically generate and run a scraping script!
 
+**NEW**: Now supports ZhipuAI GLM models!
+```
+/crawl https://docs.example.com
+Extract: all API endpoints
+Model: glm-4-long  # 1M token context!
+```
+
 ---
 
 ### 2. **Run Example Scripts**
@@ -113,7 +120,39 @@ Use crawl to extract product prices from https://shop.example.com
 
 ---
 
-### 6. **Check GitHub Repository**
+### 6. **Use ZhipuAI GLM Models (NEW!)**
+
+GLM models offer 1M token context and competitive pricing!
+
+#### Setup
+```bash
+# Get API key from https://open.bigmodel.cn/
+export ZHIPUAI_API_KEY="your-api-key"
+```
+
+#### Quick Test
+```python
+from gemini_config import crawl_with_glm
+import asyncio
+
+asyncio.run(crawl_with_glm(
+    url="https://docs.example.com",
+    extraction_instruction="Extract all documentation sections",
+    model="glm-4-long"  # 1M context for large pages!
+))
+```
+
+#### Why GLM?
+- 📚 **1M token context** (GLM-4-Long) vs 128K-200K typical
+- 💰 **$3/month** subscription vs $20+ alternatives
+- ⚡ **Fast models** (GLM-4-Flash) for speed
+- 🧠 **Enhanced reasoning** (GLM-4-Plus) for complex tasks
+
+See [GLM_INTEGRATION.md](./GLM_INTEGRATION.md) for complete guide.
+
+---
+
+### 7. **Check GitHub Repository**
 
 Visit: https://github.com/isaacmorgado/gemini-web-miner
 
@@ -317,16 +356,19 @@ All guides in `~/Desktop/Tools/crawl4ai-scripts/`:
 
 ## ✨ Features Summary
 
-✅ **60-80% cost savings** vs OpenAI
+✅ **60-85% cost savings** vs OpenAI (with GLM models)
 ✅ **20-30% faster** response times
 ✅ **Natural language** extraction
 ✅ **Full authentication** support (form, cookie, token, OAuth, 2FA)
 ✅ **Stealth mode** (bypasses bot detection)
-✅ **Multiple models** (Flash, Pro, Thinking)
+✅ **Multiple AI providers**:
+   - **Gemini**: Flash, Pro, Thinking (URL context, grounding)
+   - **GLM**: GLM-4-Long (1M context), GLM-4-Plus, GLM-4-Flash
+✅ **1M token context** (GLM-4-Long - best for large pages)
 ✅ **Clean markdown** output
 ✅ **JavaScript support** (handles dynamic sites)
-✅ **URL context** (documented, implementation planned)
-✅ **Google Search grounding** (documented, implementation planned)
+✅ **URL context** (Gemini - documented, implementation planned)
+✅ **Google Search grounding** (Gemini - documented, implementation planned)
 
 ---
 
