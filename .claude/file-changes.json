@@ -86,8 +86,13 @@
       "file": "/Users/imorgado/Desktop/Tools/crawl4ai-scripts/roo-code-mcp-config.json",
       "type": "modified",
       "timestamp": "2026-01-13T01:05:59Z"
+    },
+    {
+      "file": "/Users/imorgado/Desktop/Tools/crawl4ai-scripts/GETTING_STARTED.md",
+      "type": "modified",
+      "timestamp": "2026-01-13T01:06:53Z"
     }
   ],
-  "change_count": 17,
+  "change_count": 18,
   "checkpoint_count": 0
 }
