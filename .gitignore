@@ -48,3 +48,9 @@ secrets/
 *.tmp
 *.temp
 .cache/
+
+# Claude Code memory and local state
+.claude/
+
+# Monitoring data
+monitoring_data/
